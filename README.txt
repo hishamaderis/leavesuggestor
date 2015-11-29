@@ -1,5 +1,5 @@
 # leavesuggestor
-leave suggestor for python project
+leave_suggestor.py for python project
 
 How to use:
 1. checkout this git repo
