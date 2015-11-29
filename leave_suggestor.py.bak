@@ -1,0 +1,74 @@
+import csv
+import datetime
+import json
+from pprint import pprint
+
+year = input("Please put in the year of your interest: ")
+print ("You have put in " + year)
+
+if year == '2016':
+#	with open('2016.csv') as f:
+#		mycsv = csv.reader(f)
+#    		for row in mycsv:
+#        		text = row[1]
+
+	mycsv = csv.reader(open('2016.csv'))
+	list = []
+	for row in mycsv:
+   		list.append(row[0].split())
+#		list = row[0].split()
+	#	print (list[])
+	print(list)
+
+#	columns = []
+#	with open('2016.csv') as f:
+#		reader = csv.DictReader(f) # read rows into a dictionary format
+#		for row in reader: # read a row as {column1: value1, column2: value2,...}
+#			for (k,v) in row.items(): # go over each column name and value 
+#				columns[k].append(v) # append the value into the appropriate list based on column name k
+else:
+	print("We have only 2016 in our record for time being, thanks")
+
+#for date in list:
+#	print (date.weekday())
+#	print (date)
+
+print datetime.today.weekday()
+
+
+
+
+
+#today = datetime.datetime.today()
+#print ("today's date is " + today.strftime('%Y%m%d'))
+
+#f = open('data.csv')
+#csv_f = csv.reader(f)
+#d = dict(csv_f)
+
+# if year == '2016':
+# 	with open('2016.csv') as f:
+#     		d = dict(filter(None, csv.reader(f)))
+#     		print(d)
+# else:
+# 	print("We have only 2016 in our record for time being, thanks")
+# 
+
+#for k, v in csv_f:
+#	d[k]=v
+#    print (row[1])
+
+
+#t.strftime('%m/%d/%Y')
+#with open('data.json') as data_file:    
+#    data = json.load(data_file)
+#pprint(data)
+
+
+
+#reader = csv.reader(open('data.csv', 'r'))
+#d = {}
+#for row in reader:
+#   k, v = row
+#   d[k] = v
+#	print (d[1])
