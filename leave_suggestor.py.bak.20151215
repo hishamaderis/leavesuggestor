@@ -2,7 +2,6 @@ import csv
 import datetime
 import json
 from pprint import pprint
-from termcolor import colored, cprint
 
 year = ''
 leave = ''
@@ -17,13 +16,13 @@ def maxLeave(leave):
 			print ("You can apply a leave on:")
 			for k,v	in mydict.items():
 				if v == 'Monday':
-					print ("Friday before, or Tuesday after " + colored(k,'green') + " to get maximum numbers of leave, which is 4 days\n")
+					print ("Friday before, or Tuesday after " + k + " to get maximum numbers of leave, which is 4 days")
 				if v == 'Tuesday':
-					print ("Monday before " + colored(k,'yellow') + " to get maximum numbers of leave, which is 4 days\n")
+					print ("Monday before " + k + " to get maximum numbers of leave, which is 4 days")
 				if v == 'Thursday':
-					print ("Friday after " + colored(k,'blue') + " to get maximum numbers of leave, which is 4 days\n")
+					print ("Friday after " + k + " to get maximum numbers of leave, which is 4 days")
 				if v == 'Friday':
-					print ("Thursday before, or Monday after  " + colored(k,'magenta') + " to get maximum numbers of leave, which is 4 days\n")
+					print ("Thursday before, or Monday after  " + k + " to get maximum numbers of leave, which is 4 days")
 	elif leave == '2':
 		with open('2016.csv', mode='r') as infile:
 			reader = csv.reader(infile)
@@ -31,15 +30,15 @@ def maxLeave(leave):
 			print ("You can apply a leave on:")
 			for k,v	in mydict.items():
 				if v == 'Monday':
-					print ("Tuesday and Wednesday after, or Thursday and Friday before " + colored(k,'green') + " to get maximum numbers of leave, which is 5 days\n")
+					print ("Tuesday and Wednesday after, or Thursday and Friday before " + k + " to get maximum numbers of leave, which is 5 days")
 				if v == 'Tuesday':
-					print ("Friday and Monday before " + colored(k,'yellow') + " to get maximum numbers of leave, which is 5 days\n")
+					print ("Friday and Monday before " + k + " to get maximum numbers of leave, which is 5 days")
 				if v == 'Wednesday':
-					print ("Monday and Tuesday before, or Thursday and Friday after " + colored(k,'cyan') + " to get maximum numbers of leave, which is 5 days\n")
+					print ("Monday and Tuesday before, or Thursday and Friday after " + k + " to get maximum numbers of leave, which is 5 days")
 				if v == 'Thursday':
-					print ("Thursday and Friday after " + colored(k,'blue') + " to get maximum numbers of leave, which is 5 days\n")
+					print ("Thursday and Friday after " + k + " to get maximum numbers of leave, which is 5 days")
 				if v == 'Friday':
-					print ("Monday and Tuesday after " + colored(k,'magenta') + " to get maximum numbers of leave, which is 5 days\n")
+					print ("Monday and Tuesday after " + k + " to get maximum numbers of leave, which is 5 days")
 	elif leave == '0':
 		print ("You don't need this program if you are not willing to apply for any leave")
 	else:
